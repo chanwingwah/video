@@ -1,0 +1,146 @@
+@media only screen and (min-width: 1025px) {
+	.video-item {
+		width: calc(33% - 60px);
+		margin: 30px;
+	}
+	.video-item-pic {
+		height: 180px;
+	}
+	.video-list{
+		padding: 20px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.video-item {
+		width: calc(33% - 60px);
+		margin: 24px;
+	}
+	.video-item-pic {
+		height: 90px;
+	}
+	.video-item-a {
+		padding: 5px 0 !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.video-item {
+		box-sizing: border-box;
+		margin: 10px;
+	}
+	
+	.video-item-pic {
+		height: 130px;
+	}
+		.video-list {
+			padding: 10px;
+		}
+}
+
+@media only screen and (max-width: 767px) and (min-width: 650px) {
+
+	.video-item {
+		width: calc(49% - 60px);
+		margin: 24px;
+	}
+}
+.video-item {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all ease 0.5s;
+}
+
+.video-item:hover p {
+	color: #111;
+}
+
+.video-item-pic {
+	width: 100%;
+	overflow: hidden;
+}
+
+.video-item-pic img {
+	width: 100%;
+	height: auto;
+}
+
+
+.video-item-title {
+	font-size: .9rem;
+	height: 60px;
+	line-height: 1.6em;
+	white-space: normal;
+	font-size: 16px;
+    width: calc(100% - 40px);
+    margin: auto;
+    display: -webkit-flex;
+	/* Safari */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.video-item-title p {
+	color: #333333;
+	 max-height: 50px;
+	line-height: 1.6em;
+	white-space: normal;
+	width: 100%;
+	display: -webkit-flex;
+	/* Safari */
+	white-space: normal;
+	padding: 0px;
+	margin: 0px;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.video-item-title p:before {
+	display: inline-block;
+	content: '';
+	border: 6px solid transparent;
+	border-left: 6px solid #1f81d7;
+}
+
+.video-item-a {
+	    display: inline-block;
+	    padding: 5px;
+	    font-size: 14px;
+	    margin: 5px;
+	    width: 39%;
+	    max-width: 200px;
+	    text-align: center;
+	    color: #666;
+	    border-radius: 5px;
+	    transition: all ease 0.3s;
+	    border: 1px solid #CCC;
+}
+
+.video-item-a:hover {
+	background-color: #49c0c7;
+	color: #fff;
+}
+.video-node-title{
+	border-left: 2px solid #1f81d7;
+	padding: 3px 15px;
+	margin: 5px 0;
+}
+.video-node{
+	padding-bottom:20px; 
+}
+
+#video{
+	width: 100%;
+	max-width: 600px;
+}

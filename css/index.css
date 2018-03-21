@@ -1,0 +1,59 @@
+.index-list span.title:before {
+    display: inline-block;
+    content: '';
+    border: 6px solid transparent;
+    border-left: 6px solid #1f81d7;
+}
+
+.index-list a:hover {
+    color: #1377a8;
+}
+
+
+
+
+@media only screen and (min-width: 769px) {
+    .index-left {
+        float: right;
+        width: calc(47% - 40px);
+    }
+    .index-right {
+        width: 53%;
+        float: left;
+    }
+    .index-list span.title:before {
+        margin-right: 15px;
+    }
+    ul.c-list span.title {
+        width: calc(100%);
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 10px;
+    }
+        ul.c-list span.time {
+       
+            margin-left: 25px;
+        }
+
+}
+
+@media only screen and (max-width: 500px) {
+    ul.c-list span.title {
+        width: 100%;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    ul.c-list span.time {
+        margin-left: 16px;
+        font-size: 12px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.2em;
+    }
+}

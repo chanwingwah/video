@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<!-- 视频章节列表 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>教师发展学习培训平台</title>
+    <script src="js\plugin\jquery-1.8.3.min.js"></script>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/chapter.css">
+</head>
+
+<body>
+    <!-- header共用 -->
+
+    <section id="header">
+    </section>
+
+    <div class="c-wrapper main-wrapper">
+        <!-- 只有这部分是不一样的 -->
+        <div class="main">
+
+            <div class="c-title">
+                <a href="chapterList.html">
+                    <span class="video-bg"></span>
+                    <span>马克思主义</span>
+                </a>
+                <span> >> 第一章</span>
+            </div>
+            <div id="firstpane" class="menu_list">
+
+                <a class="menu_head current">第一章</a>
+                <div class="menu_body video-list">
+                    <a href="http://spzy.tangwaitang.cn/sys/uploads/videofaces/20171025095229.png">
+                        <div class="video-item">
+                            <div class="video-item-pic">
+                                <img src="http://spzy.tangwaitang.cn/sys/uploads/videofaces/20171025095229.png">
+                            </div>
+                            <div class="course-title">
+                                <div>形势与政策形势与政策形势与政策形势与政策形势与政策形势与政策</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- 友情链接 -->
+        <div id="links">
+        </div>
+    </div>
+    <!-- footer共用 -->
+    <section id="footer"></section>
+
+    <script>
+        // 模块引用
+        $("#header").load("templates/header.html");
+        $("#footer").load("templates/footer.html");
+        $("#links").load("templates/links.html");
+    </script>
+    <script>
+        // 模块引用
+        $("#header").load("templates/header.html");
+        $("#footer").load("templates/footer.html");
+        $("#links").load("templates/links.html");
+
+
+        $(function () {
+
+            var item = document.getElementsByClassName('video-item-pic');
+            var itemheight = item[0].offsetWidth * 0.618
+            for (var i = 0; i < item.length; i++) {
+                item[i].style.height = itemheight + "px";
+            }
+
+            // 课程图片适应处理
+            function imageSize2() {
+                var item = document.getElementsByClassName('video-item-pic');
+                var itemheight = item[0].offsetWidth * 0.618
+                var itemwidth = item[0].offsetWidth
+                for (var i = 0; i < item.length; i++) {
+                    item[i].style.height = itemheight + "px";
+                    if (item[i].getElementsByTagName('img')[0].offsetHeight < itemheight) {
+                        item[i].getElementsByTagName('img')[0].style.height = itemheight + "px";
+                        item[i].getElementsByTagName('img')[0].style.width = "auto";
+                        item[i].getElementsByTagName('img')[0].style.marginLeft = (itemwidth - item[i].getElementsByTagName(
+                            'img')[0].offsetWidth) / 2 + "px"
+                    } else {
+                        item[i].getElementsByTagName('img')[0].style.marginTop = (itemheight - item[i].getElementsByTagName(
+                            'img')[0].offsetHeight) / 2 + "px"
+                    }
+                }
+
+            }
+
+
+            window.onload = function () {
+                imageSize2();
+
+            }
+
+
+        });
+    </script>
+
+</body>
+
+
+</html>

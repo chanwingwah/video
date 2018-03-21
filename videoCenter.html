@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>教师发展学习培训平台</title>
+    <script src="js\plugin\jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/videoCenter.css">
+</head>
+
+<body>
+    <!-- header共用 -->
+
+    <section id="header">
+    </section>
+    <div class="c-wrapper main-wrapper">
+        <!-- 只有这部分是不一样的 -->
+        <div class="main">
+            <div class="c-title">
+                <a href="videoCenter.html">
+                    <span class="video-bg"></span>
+                    <span>视频资源</span>
+                </a>
+            </div>
+            <div class="courseList">
+                <div class="course-item">
+                    <a href="chapterList.html" title="形势与政策">
+                        <div class="img-wrap">
+                            <img src="image\books\1.jpg">
+                        </div>
+                        <div class="course-title">
+                            <div>形势与政策</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="course-item">
+                    <a href="chapterList.html" title="形势与政策">
+                        <div class="img-wrap">
+                            <img src="image\books\2.jpg">
+                        </div>
+                        <div class="course-title">
+                            <div>防务新观察</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="course-item">
+                    <a href="chapterList.html" title="形势与政策">
+                        <div class="img-wrap">
+                            <img src="image\books\3.jpg">
+                        </div>
+                        <div class="course-title">
+                            <div>法制中国</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="course-item">
+                    <a href="chapterList.html" title="形势与政策">
+                        <div class="img-wrap">
+                            <img src="image\books\4.jpg">
+                        </div>
+                        <div class="course-title">
+                            <div>法制中国</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="c-clear"></div>
+        <!-- 友情链接 -->
+        <div id="links">
+        </div>
+    </div>
+    <div class="c-clear"></div>
+    <!-- footer共用 -->
+    <section id="footer"></section>
+
+
+
+    <div class="fixed-report writereport">
+        <div>学习</div>
+        <div>报告</div>
+    </div>
+    </div>
+    <div class="write" style="display:none;">
+        <form>
+            <div class="write-title">
+                <span>学习报告</span>
+            </div>
+            <div class="write-subtitle">
+                <p>标题</p>
+                <input type="text" name="">
+            </div>
+            <div class="write-content">
+                <p>正文</p>
+                <textarea></textarea>
+            </div>
+
+            <button class="write-btn">请先登录</button>
+            <button class="write-btn write-btn2 " type="submit">确认</button>
+            <span class="close" type="button">关闭</span>
+        </form>
+    </div>
+
+
+    <script>
+        // 模块引用
+        $("#header").load("templates/header.html");
+        $("#footer").load("templates/footer.html");
+        $("#links").load("templates/links.html");
+    </script>
+
+    <script>
+        $(function () {
+
+
+            // $('.fixed-report').click(function (e) {
+            //     $('.lg-reg-masked').fadeIn('slow');
+            //     $('.write').slideDown('slow');
+            // })
+
+            var item = document.getElementsByClassName('img-wrap');
+            var itemheight = item[0].offsetWidth * 0.75
+            for (var i = 0; i < item.length; i++) {
+                item[i].style.height = itemheight + "px";
+            }
+
+            // 课程图片适应处理
+            function imageSize2() {
+                var item = document.getElementsByClassName('img-wrap');
+                var itemheight = item[0].offsetWidth * 1
+                var itemwidth = item[0].offsetWidth
+                for (var i = 0; i < item.length; i++) {
+                    item[i].style.height = itemheight + "px";
+                    if (item[i].getElementsByTagName('img')[0].offsetHeight < itemheight) {
+                        item[i].getElementsByTagName('img')[0].style.height = itemheight + "px";
+                        item[i].getElementsByTagName('img')[0].style.width = "auto";
+                        item[i].getElementsByTagName('img')[0].style.marginLeft = (itemwidth - item[i].getElementsByTagName(
+                            'img')[0].offsetWidth) / 2 + "px"
+                    } else {
+                        item[i].getElementsByTagName('img')[0].style.marginTop = (itemheight - item[i].getElementsByTagName(
+                            'img')[0].offsetHeight) / 2 + "px"
+                    }
+                }
+
+            }
+
+
+            window.onload = function () {
+                imageSize2();
+
+            }
+
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>

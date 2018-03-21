@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>教师发展学习培训平台</title>
+    <script src="js\plugin\jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/videoPlay.css">
+</head>
+
+<body>
+    <!-- header共用 -->
+
+    <section id="header">
+    </section>
+    <div class="c-wrapper main-wrapper">
+        <!-- 只有这部分是不一样的 -->
+        <div class="main">
+            <div class="c-title">
+                <a href="chapter.html">
+                    <span class="back-bg"></span>
+                    <span>返回章列表</span>
+                </a>
+            </div>
+           
+
+            <div class="videobox">
+                <video id="video" src="" controls="controls" preload="auto">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div> 
+            <div class="c-title">
+                <span class="xinxi-bg"></span>
+                <span>视频信息</span>
+            </div>
+            <div class="video-intro"> 
+                <p class="video-title">视频名称：<span>形势与政策</span> </p>
+                <p class="video-title">所属课程：<span>形势与政策</span> </p>
+                <p class="video-title">所属章节：<span>形势与政策</span> </p>
+                <!-- <p class="video-title">文件名称：20170912095544.mp4</p> -->
+                <p class="video-brief">视频简介：<span>每月一课</span></p>
+                <!-- <p>
+                    <a href="material.html" class="video-item-a left">学习资料</a>
+                    <a href="homework.html" class="video-item-a right">学习作业</a>
+                </p>                 -->
+            </div>
+
+            <div class="c-clear"></div>
+
+
+            <!-- 友情链接 -->
+            <div id="links">
+            </div>
+        </div>
+
+    </div>
+    <div class="c-clear"></div>
+    <!-- footer共用 -->
+    <section id="footer"></section>
+
+    <script>
+        // 模块引用
+        $("#header").load("templates/header.html");
+        $("#footer").load("templates/footer.html");
+        $("#links").load("templates/links.html");
+    </script>
+</body>
+
+</html>

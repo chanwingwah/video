@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>教师发展学习培训平台</title>
+    <script src="js\plugin\jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/passageDetail.css">
+</head>
+
+<body>
+    <!-- header共用 -->
+
+    <section id="header">
+    </section>
+    <div class="c-wrapper main-wrapper">
+        <!-- 只有这部分是不一样的 -->
+        <div class="main">
+            <div class="c-title">
+                <span class="jianjie-bg"></span>
+                <span>资源库简介</span>
+            </div>
+            <div class="introduction">
+                <div class="introduction-detail">
+                    <p class="tip">本教学视频资源库中，包含了历史事件纪录片、革命基地介绍、名人历史讲解等5000个视频，是根据思政课章节内容整合编辑而成的实用型视频资源库，为高校提供专业的思政课视频备课资源。此资源库由教育部马克思主义理论类专业教学指导委员会委员、广东外语外贸大学原教务处长、马克思主义学院院长、浙江越秀外国语学院原执行校长、绍兴职业技术学院正校长级顾问詹文都教授、博士指导编制而成。
+                    </p>
+                    <p class="tip">每个视频为2-10分钟，可作为思政课堂上的简短资料展示，内容不会过于冗长，知识点更为集中。避免了以往老师们讲课时，在较长时间的视频中需要手动拉动进度条或者记住视频时间点才能准确展示知识点的问题。
+                    </p>
+                    <p class="tip">安装：
+                    </p>
+                    <p class="tip">用户如果已有视频播放平台，购买视频后，本公司可免费提供视频上传服务；
+                    </p>
+                    <p class="tip">用户如果只有服务器，没有管理页面，购买视频后，本公司可以优惠价另外设计页面并免费提供视频上传服务；
+                    </p>
+                    <p class="tip">用户如果需要将视频安装于校内机房，本公司可免费提供视频上 传服务；</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="c-clear"></div>
+
+        <!-- 友情链接 -->
+        <div id="links">
+        </div>
+    </div>
+
+    </div>
+    <div class="c-clear"></div>
+    <!-- footer共用 -->
+    <section id="footer"></section>
+
+    <script>
+        // 模块引用
+        $("#header").load("templates/header.html");
+        $("#footer").load("templates/footer.html");
+        $("#links").load("templates/links.html");
+    </script>
+</body>
+
+</html>
